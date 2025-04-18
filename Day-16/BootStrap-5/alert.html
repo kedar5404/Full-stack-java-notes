@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bootstrap Alerts Example</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+<body class="p-4">
+
+    <h2 class="mb-4">Bootstrap Alerts</h2>
+
+    <!-- Basic Alerts -->
+    <h3>Basic Alerts</h3>
+    <div class="alert alert-primary">This is a primary alert!</div>
+    <div class="alert alert-success">This is a success alert!</div>
+    <div class="alert alert-danger">This is a danger alert!</div>
+    <div class="alert alert-warning">This is a warning alert!</div>
+    <div class="alert alert-info">This is an info alert!</div>
+    <div class="alert alert-light">This is a light alert!</div>
+    <div class="alert alert-dark">This is a dark alert!</div>
+
+    <hr>
+
+    <!-- Dismissible Alerts -->
+    <h3>Dismissible Alerts</h3>
+    <div class="alert alert-warning alert-dismissible fade show" role="alert">
+        <strong>Warning!</strong> This is a dismissible alert.
+        <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+    </div>
+
+    <div class="alert alert-success alert-dismissible fade show" role="alert">
+        <strong>Success!</strong> You have completed the task.
+        <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+    </div>
+
+    <hr>
+
+    <!-- Alerts with Links -->
+    <h3>Alerts with Links</h3>
+    <div class="alert alert-info">
+        Need help? <a href="#" class="alert-link">Click here</a> for more details.
+    </div>
+
+    <hr>
+
+    <!-- Alerts with Icons -->
+    <h3>Alerts with Icons</h3>
+    <div class="alert alert-danger d-flex align-items-center" role="alert">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-exclamation-triangle me-2" viewBox="0 0 16 16">
+            <path d="M7.938 2.016a.903.903 0 0 1 1.125 0l6.857 5.481a.902.902 0 0 1 .31.9l-2.597 8.053a.902.902 0 0 1-.855.61H3.221a.902.902 0 0 1-.855-.61L-.232 8.397a.902.902 0 0 1 .31-.9L7.938 2.016zM8 5.667c-.43 0-.78.35-.78.78v3.11c0 .43.35.78.78.78.43 0 .78-.35.78-.78V6.447c0-.43-.35-.78-.78-.78zm.75 7.167a.75.75 0 1 0-1.5 0 .75.75 0 0 0 1.5 0z"/>
+        </svg>
+        <div>
+            <strong>Danger!</strong> Something went wrong.
+        </div>
+    </div>
+
+</body>
+</html>

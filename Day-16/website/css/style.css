@@ -1,0 +1,19 @@
+/* style.css */
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+.navbar {
+    margin-bottom: 20px;
+}
+
+
+.card img {
+    height: 200px;
+    object-fit: cover;
+}
+
+footer {
+    margin-top: 20px;
+}

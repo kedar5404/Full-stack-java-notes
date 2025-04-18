@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bootstrap Grid - Justify Content</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .box {
+            background-color: #ff5733;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            border: 1px solid white;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h2 class="text-center mt-3">Justify Content Example</h2>
+
+    <div class="row justify-content-center">
+        <div class="col-md-3 box">Centered Column</div>
+        <div class="col-md-3 box">Centered Column</div>
+    </div>
+
+    <div class="row justify-content-between mt-3">
+        <div class="col-md-3 box">Start</div>
+        <div class="col-md-3 box">End</div>
+    </div>
+
+    <div class="row justify-content-around mt-3">
+        <div class="col-md-3 box">Around 1</div>
+        <div class="col-md-3 box">Around 2</div>
+    </div>
+
+    <div class="row justify-content-evenly mt-3">
+        <div class="col-md-3 box">Evenly 1</div>
+        <div class="col-md-3 box">Evenly 2</div>
+    </div>
+
+</div>
+
+</body>
+</html>

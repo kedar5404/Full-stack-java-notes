@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap Responsive Example</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <style>
+        /* Custom Media Queries */
+        body {
+            background-color: lightgray;
+        }
+
+        @media (min-width: 576px) { /* Small Screens */
+            body { background-color: lightblue; }
+            .custom-text { font-size: 18px; }
+        }
+
+        @media (min-width: 768px) { /* Medium Screens */
+            body { background-color: lightgreen; }
+            .custom-text { font-size: 22px; }
+        }
+
+        @media (min-width: 992px) { /* Large Screens */
+            body { background-color: lightcoral; }
+            .custom-text { font-size: 26px; }
+        }
+
+        @media (min-width: 1200px) { /* Extra Large Screens */
+            body { background-color: lightsalmon; }
+            .custom-text { font-size: 30px; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Responsive Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="#">My Website</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Responsive Grid System -->
+    <div class="container mt-4">
+        <div class="row">
+            <div class="col-12 col-md-6 col-lg-4">
+                <div class="p-3 bg-primary text-white text-center">Column 1</div>
+            </div>
+            <div class="col-12 col-md-6 col-lg-4">
+                <div class="p-3 bg-secondary text-white text-center">Column 2</div>
+            </div>
+            <div class="col-12 col-lg-4">
+                <div class="p-3 bg-success text-white text-center">Column 3</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Visibility Utility Classes -->
+    <div class="text-center mt-4">
+        <p class="d-block d-sm-none">Visible only on extra-small screens.</p>
+        <p class="d-none d-sm-block d-md-none">Visible only on small screens.</p>
+        <p class="d-none d-md-block d-lg-none">Visible only on medium screens.</p>
+        <p class="d-none d-lg-block d-xl-none">Visible only on large screens.</p>
+        <p class="d-none d-xl-block">Visible only on extra-large screens.</p>
+    </div>
+
+    <!-- Custom Media Query Effect -->
+    <h2 class="text-center custom-text mt-4">Resize the window to see background and text size changes!</h2>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
