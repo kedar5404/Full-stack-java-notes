@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Vedisoft JavaScript Examples : The Binary + Operator </title>
+    <style>
+        div {
+            font-size: xx-large;
+            margin-left: 100px;
+        }
+    </style>
+    <script>
+        function showOutput() {
+            let result = document.getElementById("result");
+            result.innerHTML = `
+            333 === 333 = ${333 === 333} <br>
+            333 == 333 = ${333 == 333} <br>
+            '333' == Number(333) = ${'333' == Number(333)} <br>
+            '333' === Number(333) = ${'333' === Number(333)} <br>
+            333 !== 333 = ${333 !== 333} <br>
+            333 != 333 = ${333 != 333} <br>
+            '333' != Number(333) = ${'333' != Number(333)} <br>
+            '333' !== Number(333) = ${'333' !== Number(333)} <br>
+            `;
+        }
+    </script>
+</head>
+
+<body onload="showOutput();">
+    <h1>Equality and Inequality Operators</h1>
+    <div id="result"></div>
+</body>
+
+</html>
+
+<!--
+Vedisoft
+219-B, Sector-C, Indrapuri, Bhopal
+www.vedisoft.in
+-->

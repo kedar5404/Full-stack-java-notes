@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Vedisoft JavaScript Examples : for </title>
+    <style>
+        div {
+            font-size: large;
+        }
+    </style>
+    <script>
+        function calculate() {
+            let i;
+            let message = '';
+            let result = document.getElementById("result");
+            for(i = 1; i <= 100; i++) {
+                message += `${i} &nbsp; &nbsp; &nbsp; &nbsp;`;
+                if (i % 10 == 0)
+                    message += '<br>';
+            }
+            result.innerHTML = message;
+        }
+    </script>
+</head>
+
+<body onload="calculate();">
+    <h1>For Loop</h1>
+    <h2>Counting from 1 to 100 using For Loop</h2>
+    <div id="result"></div>
+</body>
+
+</html>
+
+<!--
+Vedisoft
+219-B, Sector-C, Indrapuri, Bhopal
+www.vedisoft.in
+-->

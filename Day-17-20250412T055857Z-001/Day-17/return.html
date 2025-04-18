@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Vedisoft JavaScript Examples : return statement </title>
+    <style>
+        div {
+            font-size: large;
+        }
+    </style>
+    <script>
+        function sum(a, b) {
+            return a + b;
+        }
+
+        function calculate() {
+            let result = document.getElementById("result");
+            let x = sum(10, 20);
+            let message = `Sum is ${x}`;
+            result.innerHTML = message;
+        }
+    </script>
+</head>
+
+<body onload="calculate();">
+    <h1>Return Statement</h1>
+    <div id="result"></div>
+</body>
+
+</html>
+
+<!--
+Vedisoft
+219-B, Sector-C, Indrapuri, Bhopal
+www.vedisoft.in
+-->

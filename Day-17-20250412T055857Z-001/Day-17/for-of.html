@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Vedisoft JavaScript Examples : for of </title>
+    <style>
+        div {
+            font-size: large;
+            margin-left: 50px;
+        }
+    </style>
+    <script>
+        function calculate() {
+            let data = [1, 2, 3, 4, 5, 6, 7, 8, 9], sum = 0;
+            let message = '';
+            let result1 = document.getElementById("result1");
+            for (let element of data) {
+                message += `${element} <br>`;
+                sum += element;
+            }
+            message += `Sum of Elements is ${sum}`;
+            result1.innerHTML = message;
+
+
+            let result2 = document.getElementById("result2");
+            message = '<h3> Using Object.keys</h3>';
+            let o = { x: 10, y: 20, z: 30 };
+            for (let k of Object.keys(o)) {
+                message += `Key ${k} Value ${o[k]} <br>`;
+            }
+
+            message += '<h3> Using Object.values</h3>';
+            for (let v of Object.values(o)) {
+                message += `Value ${v} <br>`;
+            }
+
+            message += '<h3> Using Object.enteries</h3>';
+            for (let [k, v] of Object.entries(o)) {
+                message += `Key ${k} Value ${v} <br>`;
+            }
+
+            result2.innerHTML = message;
+
+            let result3 = document.getElementById("result3");
+            let frequency = {};
+            message = '';
+            for (let letter of "mississippi") {
+                if (frequency[letter]) {
+                    frequency[letter]++;
+                } else {
+                    frequency[letter] = 1;
+                }
+            }
+            for (let [k, v] of Object.entries(frequency)) {
+                message += `Alphabet ${k} Count ${v} <br>`;
+            }
+
+            result3.innerHTML = message;
+
+        }
+    </script>
+</head>
+
+<body onload="calculate();">
+    <h1>for/of Loop</h1>
+    <h2>for/of to loop through the elements of an array of numbers and compute their sum</h2>
+    <div id="result1"></div>
+    <h2>for/of with Objects</h2>
+    <div id="result2"></div>
+    <h2>for/of with String</h2>
+    <div id="result3"></div>
+</body>
+
+</html>
+
+<!--
+Vedisoft
+219-B, Sector-C, Indrapuri, Bhopal
+www.vedisoft.in
+-->

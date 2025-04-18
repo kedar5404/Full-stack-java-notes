@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Vedisoft JavaScript Examples : for loop </title>
+    <style>
+        div {
+            font-size: xx-large;
+            margin-left: 100px;
+        }
+    </style>
+    <script>
+        function calculate() {
+            let num = Number(document.getElementById("num1").value);
+            let result = document.getElementById("result");
+            let message = '';
+            for (i = 1; i <= 10; i++) {
+                message += `${num} * ${i} = ${num * i} <br>`;
+            }
+            result.innerHTML = message;
+        }
+    </script>
+</head>
+
+<body onload="calculate();">
+    <h1>Forn Loop - Table Example</h1>
+    <form>
+        Number 1 : <input type="number" min="0" max="1000" id="num1" value="5" onchange="calculate();"> <br>
+        <div id="result"></div>
+    </form>
+</body>
+
+</html>
+
+<!--
+Vedisoft
+219-B, Sector-C, Indrapuri, Bhopal
+www.vedisoft.in
+-->

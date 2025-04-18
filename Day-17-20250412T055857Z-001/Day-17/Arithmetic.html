@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Vedisoft JavaScript Examples : Arithmetic Operators </title>
+    <style>
+        div {
+            font-size: xx-large;
+            margin-left: 100px;
+        }
+    </style>
+    <script>
+        function calculate() {
+            let num1 = Number(document.getElementById("num1").value);
+            let num2 = Number(document.getElementById("num2").value);
+            let result = document.getElementById("result");
+            result.innerHTML = `Sum  : ${num1 + num2} <br>
+            Difference  : ${num1 - num2} <br>
+            Product  :  ${num1 * num2} <br>
+            Quotient  : ${num1 / num2} <br>
+            Remainder  : ${num1 % num2} <br>
+            Exponential  : ${num1 ** num2} <br>`;
+        }
+    </script>
+</head>
+
+<body onload="calculate();">
+    <h1>Arithmetic Operators</h1>
+    <form>
+        Number 1 : <input type="number" min="0" max="1000" id="num1" value="5" onchange="calculate();"> <br>
+        Number 2 : <input type="number" min="0" max="1000" id="num2" value="9" onchange="calculate();"> <br>
+        <div id="result"></div>
+    </form>
+</body>
+</html>
+
+<!--
+Vedisoft
+219-B, Sector-C, Indrapuri, Bhopal
+www.vedisoft.in
+-->

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Vedisoft JavaScript Examples : continue statement </title>
+    <style>
+        div {
+            font-size: large;
+        }
+    </style>
+    <script>
+        function calculate() {
+            let result = document.getElementById("result");
+            let message = '';
+            let x = 0, y = 0;
+            skip:
+            for (x = 2; x < 4; x++) {
+                message += `x = ${x} <br>`;
+                for (y = 2; y < 6; y++) {
+                    message += `&nbsp;&nbsp;&nbsp;&nbsp; y = ${y} <br>`;
+                    if (x == y) {
+                        continue skip;
+                    }
+                }
+            }
+            result.innerHTML = message;
+        }
+    </script>
+</head>
+
+<body onload="calculate();">
+    <h1>Continue Statement (Label)</h1>
+    <div id="result"></div>
+</body>
+
+</html>
+
+<!--
+Vedisoft
+219-B, Sector-C, Indrapuri, Bhopal
+www.vedisoft.in
+-->

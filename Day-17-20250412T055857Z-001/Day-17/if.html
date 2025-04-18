@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Vedisoft JavaScript Examples : if condition </title>
+    <style>
+        div {
+            font-size: xx-large;
+        }
+    </style>
+    <script>
+        function calculate() {
+            let c = document.getElementById("c").value;
+            let result = document.getElementById("result");
+            let message;
+            if (c >= 'A' && c <= 'Z')
+                message = "Upper Case Character";
+            else if (c >= 'a' && c <= 'z')
+                message = "Lower Case Character";
+            else if (c >= '0' && c <= '9')
+                message = "It is a Digit";
+            else
+                message = "It is a special character";
+            result.innerHTML = message;
+        }
+    </script>
+</head>
+
+<body onload="calculate();">
+    <h1>if condition</h1>
+    <h2>Accept a character and print whether it is upper case, lower case, digit or a special character</h2>
+    <form>
+        Character : <input type="text" maxlength="1" value="A" onchange="calculate();" id="c"> <br>
+        <div id="result"></div>
+    </form>
+</body>
+
+</html>
+
+<!--
+Vedisoft
+219-B, Sector-C, Indrapuri, Bhopal
+www.vedisoft.in
+-->

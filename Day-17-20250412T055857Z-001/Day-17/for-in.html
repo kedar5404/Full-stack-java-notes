@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Vedisoft JavaScript Examples : for in </title>
+    <style>
+        div {
+            font-size: large;
+        }
+    </style>
+    <script>
+        function calculate() {
+            let o = { x: 1, y: 2, z: 3 };
+            let result1 = document.getElementById("result1");
+            let message = '';
+            for (let p in o) {
+                message += `Property ${p} value ${o[p]} <br>`;
+            }
+            result1.innerHTML = message;
+
+            message = '';
+            let a = [10, 20, 30, 40, 50];
+            let result2 = document.getElementById("result2");
+            for (let p in a) {
+                message += `Element ${p} value ${a[p]}<br>`;
+            }
+            result2.innerHTML = message;
+        }
+    </script>
+</head>
+
+<body onload="calculate();">
+    <h1>for/in Loop</h1>
+    <h2>for/in to enumerate properties of an object</h2>
+    <div id="result1"></div>
+    <h2>for/in to enumerate array</h2>
+    <div id="result2"></div>
+</body>
+
+</html>
+
+<!--
+Vedisoft
+219-B, Sector-C, Indrapuri, Bhopal
+www.vedisoft.in
+-->

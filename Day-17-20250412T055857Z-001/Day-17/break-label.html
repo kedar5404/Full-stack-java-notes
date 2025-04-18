@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Vedisoft JavaScript Examples : break statement </title>
+    <style>
+        div {
+            font-size: large;
+        }
+    </style>
+    <script>
+        function calculate() {
+            let result = document.getElementById("result");
+            let message = '';
+            let j = 0, k = 0;
+            abc:
+            for (j = 0; j < 5; j++) {
+                message += `j=  ${j} <br>`;
+                for (k = 2; k < 5; k++) {
+                    message += `&nbsp; &nbsp; &nbsp; &nbsp; k=  ${k} <br>`;
+                    if (j == k) {
+                        break  abc;
+                    }
+                }
+            }
+            result.innerHTML = message;
+        }
+    </script>
+</head>
+
+<body onload="calculate();">
+    <h1>Break Statement (Label)</h1>
+    <div id="result"></div>
+</body>
+
+</html>
+
+<!--
+Vedisoft
+219-B, Sector-C, Indrapuri, Bhopal
+www.vedisoft.in
+-->

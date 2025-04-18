@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Vedisoft JavaScript Examples : while </title>
+    <style>
+        div {
+            font-size: large;
+        }
+    </style>
+    <script>
+        function calculate() {
+            let i = 1;
+            let message = '';
+            let result = document.getElementById("result");
+            while (i <= 100) {
+                message += `${i} &nbsp; &nbsp; &nbsp; &nbsp;`;
+                if (i % 10 == 0)
+                    message += '<br>';
+                i++;
+            }
+            result.innerHTML = message;
+        }
+    </script>
+</head>
+
+<body onload="calculate();">
+    <h1>While Loop</h1>
+    <h2>Counting from 1 to 100 using While Loop</h2>
+    <div id="result"></div>
+</body>
+
+</html>
+
+<!--
+Vedisoft
+219-B, Sector-C, Indrapuri, Bhopal
+www.vedisoft.in
+-->

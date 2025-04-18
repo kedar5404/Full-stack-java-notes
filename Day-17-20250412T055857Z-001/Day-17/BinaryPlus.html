@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Vedisoft JavaScript Examples : The Binary + Operator </title>
+    <style>
+        div {
+            font-size: xx-large;
+            margin-left: 100px;
+        }
+    </style>
+    <script>
+        function showOutput() {
+            let result = document.getElementById("result");
+            result.innerHTML = `1 + 2   = ${1 + 2} <br>
+            "hello" + " " + "there" = ${"hello" + " " + "there"} <br>
+            "1" + "2" = ${"1" + "2"} <br>
+            "1" + 2 = ${"1" + 2} <br>
+            1 + {} = ${1 + {}} <br>
+            true + true = ${true + true} <br>
+            2 + null = ${2 + null} <br>
+            2 + undefined = ${2 + undefined} <br>
+            1 + 2 + " blind mice" = ${1 + 2 + " blind mice"} <br>
+            1 + (2 + " blind mice") = ${1 + (2 + " blind mice")} <br>`;
+        }
+    </script>
+</head>
+
+<body onload="showOutput();">
+    <h1>The Binary + Operator</h1>
+    <h1>The binary + operator adds numeric operands or concatenates string operands:</h1>
+    <div id="result"></div>
+</body>
+
+</html>
+
+<!--
+Vedisoft
+219-B, Sector-C, Indrapuri, Bhopal
+www.vedisoft.in
+-->

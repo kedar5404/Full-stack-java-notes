@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Vedisoft JavaScript Examples : switch </title>
+    <style>
+        div {
+            font-size: xx-large;
+        }
+    </style>
+    <script>
+        function calculate() {
+            let c = document.getElementById("c").value;
+            let result = document.getElementById("result");
+            let message;
+            c = c.toLowerCase();
+            switch (c) {
+                case 'a':
+                case 'e':
+                case 'i':
+                case 'o':
+                case 'u': message = `Vowel ${c}`;
+                    break;
+                default: message = "It is a consonant";
+                    break;
+            }
+            result.innerHTML = message;
+        }
+    </script>
+</head>
+
+<body onload="calculate();">
+    <h1>switch</h1>
+    <h2>Accept a character and print whether it is vowel or a consonant</h2>
+    <form>
+        Character : <input type="text" maxlength="1" value="A" onchange="calculate();" id="c"> <br>
+        <div id="result"></div>
+    </form>
+</body>
+
+</html>
+
+<!--
+Vedisoft
+219-B, Sector-C, Indrapuri, Bhopal
+www.vedisoft.in
+-->
