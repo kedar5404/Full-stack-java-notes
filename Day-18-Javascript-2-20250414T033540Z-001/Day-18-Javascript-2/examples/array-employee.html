@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>CRUD on Employee Objects</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+    }
+    input, button {
+      margin: 5px;
+      padding: 8px;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 20px;
+    }
+    th, td {
+      padding: 10px;
+      text-align: left;
+      border: 1px solid #ddd;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>Employee CRUD Operations</h2>
+
+  <!-- Form for Add and Update -->
+  <h3>Employee Form</h3>
+  <input type="text" id="name" placeholder="Enter Name" required>
+  <input type="text" id="position" placeholder="Enter Position" required>
+  <input type="number" id="salary" placeholder="Enter Salary" required>
+  <button onclick="addEmployee()">Add Employee</button>
+
+  <!-- Employee Table -->
+  <h3>Employee List</h3>
+  <table id="employeeTable">
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Position</th>
+        <th>Salary</th>
+        <th>Action</th>
+      </tr>
+    </thead>
+    <tbody>
+    </tbody>
+  </table>
+
+  <script>
+    let employees = [
+      { id: 1, name: "John Doe", position: "Manager", salary: 50000 },
+      { id: 2, name: "Jane Smith", position: "Developer", salary: 45000 }
+    ];
+
+    let editMode = false;  // To track if we are editing an employee
+    let editingId = null;  // To store the ID of the employee being edited
+
+    function displayEmployees() {
+      const tableBody = document.querySelector("#employeeTable tbody");
+      tableBody.innerHTML = "";
+      employees.forEach((employee) => {
+        const row = document.createElement("tr");
+        row.innerHTML = `
+          <td>${employee.id}</td>
+          <td>${employee.name}</td>
+          <td>${employee.position}</td>
+          <td>${employee.salary}</td>
+          <td>
+            <button onclick="editEmployee(${employee.id})">Edit</button>
+            <button onclick="deleteEmployee(${employee.id})">Delete</button>
+          </td>
+        `;
+        tableBody.appendChild(row);
+      });
+    }
+
+    function addEmployee() {
+      const name = document.getElementById("name").value;
+      const position = document.getElementById("position").value;
+      const salary = document.getElementById("salary").value;
+
+      if (name && position && salary) {
+        if (editMode) {
+          // Update the employee
+          const employee = employees.find(emp => emp.id === editingId);
+          employee.name = name;
+          employee.position = position;
+          employee.salary = Number(salary);
+          editMode = false;
+        } else {
+          // Add new employee
+          const newEmployee = {
+            id: employees.length + 1,
+            name,
+            position,
+            salary: Number(salary)
+          };
+          employees.push(newEmployee);
+        }
+        clearForm();
+        displayEmployees();
+      } else {
+        alert("Please fill in all fields.");
+      }
+    }
+
+    function editEmployee(id) {
+      const employee = employees.find(emp => emp.id === id);
+      if (employee) {
+        document.getElementById("name").value = employee.name;
+        document.getElementById("position").value = employee.position;
+        document.getElementById("salary").value = employee.salary;
+        editMode = true;
+        editingId = id; // Store the ID of the employee being edited
+        document.querySelector("button").innerText = "Update Employee"; // Change button text to "Update"
+      }
+    }
+
+    function deleteEmployee(id) {
+      const index = employees.findIndex(emp => emp.id === id);
+      if (index !== -1) {
+        employees.splice(index, 1);
+        displayEmployees();
+      }
+    }
+
+    function clearForm() {
+      document.getElementById("name").value = "";
+      document.getElementById("position").value = "";
+      document.getElementById("salary").value = "";
+      document.querySelector("button").innerText = "Add Employee"; // Reset button text to "Add"
+    }
+
+    // Initialize table
+    displayEmployees();
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+
+    <button id="addEventButton">Add Event</button>
+    <button id="removeEventButton">Remove Event</button>
+    <p id="message">Click the button to add or remove an event.</p>
+
+    <script>
+        const button = document.getElementById("addEventButton");
+        const message = document.getElementById("message");
+
+        // Function to handle event
+        const handleClick = () => {
+            message.innerText = "Button Clicked!";
+        };
+
+        // Add Event Listener
+        button.addEventListener("click", handleClick);
+
+        // Remove Event Listener
+        document.getElementById("removeEventButton").addEventListener("click", function () {
+            button.removeEventListener("click", handleClick);
+            message.innerText = "Event Listener Removed!";
+        });
+    </script>
+
+</body>
+
+</html>

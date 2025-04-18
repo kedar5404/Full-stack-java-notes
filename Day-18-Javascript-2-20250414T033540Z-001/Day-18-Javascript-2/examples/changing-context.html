@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<body>
+  <div id="box">This is <b>bold</b> text.</div>
+
+  <button onclick="changeContent()">Change</button>
+
+  <script>
+    function changeContent() {
+      const el = document.getElementById("box");
+
+      console.log("innerText:", el.innerText);       // This is bold text.
+      console.log("textContent:", el.textContent);   // This is bold text.
+      console.log("innerHTML:", el.innerHTML);       // This is <b>bold</b> text.
+
+      el.innerText = "Updated using innerText";
+    }
+  </script>
+</body>
+</html>

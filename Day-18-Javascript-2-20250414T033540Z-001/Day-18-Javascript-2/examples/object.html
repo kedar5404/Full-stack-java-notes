@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>JavaScript Object Demo</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+    }
+    h2 {
+      color: #4CAF50;
+    }
+    .output {
+      background-color: #f4f4f4;
+      padding: 15px;
+      border-radius: 8px;
+      margin-top: 20px;
+      white-space: pre-wrap;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>JavaScript Objects Demo</h2>
+  <div id="output" class="output"></div>
+
+  <script>
+    let output = "";
+
+    // 1. Creating an object
+    let student = {
+      name: "Ananya",
+      age: 21,
+      isGraduated: false,
+      subjects: ["Math", "Science", "English"],
+      address: {
+        city: "Delhi",
+        zip: "110001"
+      },
+      greet: function () {
+        return "Hi, I am " + this.name + " from " + this.address.city;
+      }
+    };
+
+    // 2. Accessing Properties
+    output += "Accessing Properties:\n";
+    output += "Name: " + student.name + "\n";
+    output += "Age: " + student["age"] + "\n";
+    output += "City: " + student.address.city + "\n\n";
+
+    // 3. Add / Update
+    student.email = "ananya@example.com";
+    student.age = 22;
+    output += "After Adding & Updating:\n";
+    output += "Email: " + student.email + "\n";
+    output += "Updated Age: " + student.age + "\n\n";
+
+    // 4. Delete
+    delete student.isGraduated;
+    output += "After Deleting 'isGraduated':\n";
+    output += "isGraduated: " + student.isGraduated + "\n\n";
+
+    // 5. Looping through
+    output += "Looping through Properties:\n";
+    for (let key in student) {
+      if (typeof student[key] !== "function") {
+        output += key + ": " + JSON.stringify(student[key]) + "\n";
+      }
+    }
+    output += "\n";
+
+    // 6. Built-in Object Methods
+    output += "Built-in Methods:\n";
+    output += "Keys: " + Object.keys(student).join(", ") + "\n";
+    output += "Values: " + Object.values(student).join(", ") + "\n\n";
+
+    // 7. Destructuring & Shorthand
+    let { name, age } = student;
+    let grade = "A";
+    let year = 2025;
+    let reportCard = { grade, year };
+
+    output += "Destructuring & Shorthand:\n";
+    output += "Destructured Name: " + name + "\n";
+    output += "Destructured Age: " + age + "\n";
+    output += "Report Card: Grade - " + reportCard.grade + ", Year - " + reportCard.year + "\n\n";
+
+    // 8. Method
+    output += "Calling Object Method:\n";
+    output += student.greet() + "\n";
+
+    // Output to browser
+    document.getElementById("output").innerText = output;
+
+    // Log final object
+    console.log("Final student object:", student);
+  </script>
+</body>
+</html>

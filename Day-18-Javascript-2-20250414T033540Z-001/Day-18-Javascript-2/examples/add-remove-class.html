@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    .highlight {
+      background-color: yellow;
+      padding: 5px;
+    }
+  </style>
+</head>
+<body>
+  <p id="text">Toggle highlight!</p>
+  <button onclick="toggleHighlight()">Toggle Class</button>
+
+  <script>
+    function toggleHighlight() {
+      const text = document.getElementById("text");
+      text.classList.toggle("highlight");
+    }
+  </script>
+</body>
+</html>

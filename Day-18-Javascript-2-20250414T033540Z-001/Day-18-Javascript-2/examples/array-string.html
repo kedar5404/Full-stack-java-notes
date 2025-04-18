@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Cities</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+    }
+    input, button {
+      margin: 5px;
+      padding: 8px;
+    }
+    .output {
+      margin-top: 20px;
+      background: #f0f0f0;
+      padding: 15px;
+      border-radius: 10px;
+      white-space: pre-wrap;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>Cities</h2>
+
+  <!-- Inputs -->
+  <input type="text" id="cityInput" placeholder="City Name">
+  <input type="text" id="newCityInput" placeholder="New Name (for update only)"><br>
+
+  <!-- Buttons for Operations -->
+  <button onclick="addCity()">Add City</button>
+  <button onclick="updateCity()">Update City</button>
+  <button onclick="deleteCity()">Delete City</button>
+
+  <!-- Output -->
+  <div class="output" id="outputBox"></div>
+
+  <script>
+    let cities = ["Delhi", "Mumbai", "Chennai"];
+    const outputBox = document.getElementById("outputBox");
+
+    function displayCities() {
+      outputBox.innerText = cities.length
+        ? " Current Cities:\n" + cities.map((c, i) => `${i + 1}. ${c}`).join("\n")
+        : "No cities in the list.";
+    }
+
+    function addCity() {
+      const city = document.getElementById("cityInput").value.trim();
+      if (city) {
+        cities.push(city);
+        clearFields();
+        displayCities();
+      } else {
+        alert("Please enter a city name.");
+      }
+    }
+
+    function updateCity() {
+      const oldCity = document.getElementById("cityInput").value.trim();
+      const newCity = document.getElementById("newCityInput").value.trim();
+      const index = cities.indexOf(oldCity);
+
+      if (index !== -1 && newCity) {
+        cities[index] = newCity;
+        clearFields();
+        displayCities();
+      } else {
+        alert("Old city not found or new name is empty.");
+      }
+    }
+
+    function deleteCity() {
+      const cityToDelete = document.getElementById("cityInput").value.trim();
+      const index = cities.indexOf(cityToDelete);
+
+      if (index !== -1) {
+        cities.splice(index, 1);
+        clearFields();
+        displayCities();
+      } else {
+        alert("City not found in the list.");
+      }
+    }
+
+    function clearFields() {
+      document.getElementById("cityInput").value = "";
+      document.getElementById("newCityInput").value = "";
+    }
+
+    // Initial display
+    displayCities();
+  </script>
+
+</body>
+</html>

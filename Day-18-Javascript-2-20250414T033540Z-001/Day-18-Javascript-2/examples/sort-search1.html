@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Employee Table with Sorting & Searching</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        padding: 20px;
+      }
+
+      input,
+      button {
+        margin: 5px;
+        padding: 8px;
+      }
+
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 20px;
+      }
+
+      th,
+      td {
+        padding: 10px;
+        text-align: left;
+        border: 1px solid #ddd;
+      }
+
+      th {
+        cursor: pointer;
+      }
+
+      #search {
+        margin-bottom: 20px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <h2>Employee List with Sorting and Searching</h2>
+
+    <!-- Search Box -->
+    <input
+      type="text"
+      id="search"
+      placeholder="Search by name..."
+      oninput="searchEmployees()"
+    />
+
+    <!-- Employee Table -->
+    <table id="employeeTable">
+      <thead>
+        <tr>
+          <th onclick="sortTable('name')">Name</th>
+          <th onclick="sortTable('position')">Position</th>
+          <th onclick="sortTable('salary')">Salary</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- Data will be populated here -->
+      </tbody>
+    </table>
+
+    <script>
+      // Prepopulated employee data
+      let employees = [
+        { id: 1, name: "John Doe", position: "Manager", salary: 50000 },
+        { id: 2, name: "Jane Smith", position: "Developer", salary: 45000 },
+        { id: 3, name: "Mark Lee", position: "Designer", salary: 40000 },
+        { id: 4, name: "Emily Davis", position: "Developer", salary: 42000 },
+        { id: 5, name: "Daniel Lee", position: "Manager", salary: 55000 },
+      ];
+
+      // Function to display employee data in the table
+      function displayEmployees(data) {
+        const tableBody = document.querySelector("#movieTable tbody");
+        tableBody.innerHTML = "";
+        data.forEach((employee) => {
+          const row = document.createElement("tr");
+          row.innerHTML = `
+          <td>${employee.name}</td>
+          <td>${employee.position}</td>
+          <td>${employee.salary}</td>
+        `;
+          tableBody.appendChild(row);
+        });
+      }
+
+      // Function to sort the table based on the column clicked
+      function sortTable(column) {
+        const sortedEmployees = [...employees];
+        if (column === "name") {
+          sortedEmployees.sort((a, b) => a.name.localeCompare(b.name));
+        } else if (column === "position") {
+          sortedEmployees.sort((a, b) => a.position.localeCompare(b.position));
+        } else if (column === "salary") {
+          sortedEmployees.sort((a, b) => a.salary - b.salary);
+        }
+        displayEmployees(sortedEmployees);
+      }
+
+      // Function to filter employees based on the search input
+      function searchEmployees() {
+        const searchQuery = document
+          .getElementById("search")
+          .value.toLowerCase();
+        const filteredEmployees = employees.filter((employee) =>
+          employee.name.toLowerCase().includes(searchQuery)
+        );
+        displayEmployees(filteredEmployees);
+      }
+
+      // Initial display of all employees
+      displayEmployees(employees);
+    </script>
+  </body>
+</html>

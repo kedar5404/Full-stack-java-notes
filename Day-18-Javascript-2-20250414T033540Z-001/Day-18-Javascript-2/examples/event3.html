@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+  <div id="outerDiv" style="width:200px;height:200px;background-color:lightgreen;">
+    <button id="innerButton">Click Me</button>
+  </div>
+
+  <script>
+    // Event on outer div
+    document.getElementById("outerDiv").addEventListener("click", function() {
+      alert("Outer div clicked!");
+    });
+
+    // Event on inner button (bubbles to outer div)
+    document.getElementById("innerButton").addEventListener("click", function() {
+      alert("Button clicked!");
+    });
+  </script>
+
+</body>
+</html>

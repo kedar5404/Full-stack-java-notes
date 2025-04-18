@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Destructuring & Spread/Rest Demo</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+    }
+    .output {
+      background-color: #f9f9f9;
+      padding: 20px;
+      border-radius: 10px;
+      white-space: pre-wrap;
+      font-size: 16px;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>🧠 Object Destructuring + Spread/Rest Demo</h2>
+  <div class="output" id="output"></div>
+
+  <script>
+    let output = "";
+
+    // Original object
+    const employee = {
+      id: 101,
+      name: "Priya Sharma",
+      department: "HR",
+      salary: 55000,
+      city: "Mumbai",
+      country: "India"
+    };
+
+    // Destructuring name and salary, using rest to get the rest of the properties
+    const { name, salary, ...others } = employee;
+
+    // Spread: create a copy and add more data
+    const updatedEmployee = {
+      ...employee,
+      promotion: true,
+      salary: salary + 5000 // increase salary
+    };
+
+    output += "✅ Destructuring:\n";
+    output += `Name: ${name}\nSalary: ₹${salary}\n\n`;
+
+    output += "📦 Rest Operator:\n";
+    output += JSON.stringify(others) + "\n\n";
+
+    output += "🔄 Spread Operator (Updated Object):\n";
+    output += JSON.stringify(updatedEmployee, null, 2);
+
+    // Show in browser
+    document.getElementById("output").innerText = output;
+  </script>
+
+</body>
+</html>

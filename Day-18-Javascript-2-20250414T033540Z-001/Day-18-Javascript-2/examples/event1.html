@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+  <button id="clickButton">Click Me</button>
+  <div id="hoverDiv" style="width:200px;height:100px;background-color:lightblue;">Hover over me!</div>
+
+  <script>
+    document.getElementById("clickButton").addEventListener("click", function() {
+      alert("Button Clicked!");
+    });
+
+    document.getElementById("hoverDiv").addEventListener("mouseover", function() {
+      alert("Mouse Hovered!");
+    });
+  </script>
+
+</body>
+</html>

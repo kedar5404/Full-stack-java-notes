@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<body>
+  <h2 id="heading">Hello World</h2>
+  <p class="intro">Welcome to DOM!</p>
+
+  <script>
+    const byId = document.getElementById("heading");
+    const byQuery = document.querySelector(".intro");
+
+    alert("getElementById: " + byId.innerText);        // Hello World
+    alert("querySelector: " + byQuery.innerText);      // Welcome to DOM!
+  </script>
+</body>
+</html>
