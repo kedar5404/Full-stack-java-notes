@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Images & Multimedia Example</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 20px;
+        }
+        .container {
+            max-width: 800px;
+            margin: auto;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+        video, audio, iframe {
+            width: 100%;
+            max-width: 600px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>HTML Images & Multimedia Example</h1>
+        
+        <h2>1. Displaying an Image</h2>
+        <img src="images/bird.jpg" alt="Placeholder Image" width="300">
+        
+        <h2>2. Background Image</h2>
+        <div style="background-image: url('images/background.png'); height: 200px; background-size: cover;">
+            <p style="color: white; padding: 80px;">This is a background image.</p>
+        </div>
+        
+        <h2>3. Image Map</h2>
+        <img src="images/world.jpg" usemap="#workmap">
+        <map name="workmap">
+            <area shape="rect" coords="50,50,250,250" href="https://www.google.com" alt="Google">
+        </map>
+        
+        <h2>4. Embedding Audio</h2>
+        <audio controls>
+            <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg">
+            Your browser does not support the audio element.
+        </audio>
+        
+        <h2>5. Embedding Video</h2>
+        <video controls>
+            <source src="https://samplelib.com/lib/preview/mp4/sample-5s.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        
+        <h2>6. YouTube Embed</h2>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/q9ikblV9Cyg?si=W8Wz0yKmwEBkPvK4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        
+        <h2>7. Vimeo Embed</h2>
+        <iframe src="https://player.vimeo.com/video/76979871" frameborder="0" allowfullscreen></iframe>
+    </div>
+</body>
+</html>

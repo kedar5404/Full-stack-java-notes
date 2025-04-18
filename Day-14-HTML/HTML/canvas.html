@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Canvas API Example</title>
+    <style>
+        body { text-align: center; font-family: Arial, sans-serif; }
+        canvas { border: 1px solid black; margin-top: 20px; }
+    </style>
+</head>
+<body>
+    <h1>Canvas API - Drawing Graphics</h1>
+    <canvas id="myCanvas" width="500" height="300"></canvas>
+    
+    <script>
+        let canvas = document.getElementById("myCanvas");
+        let ctx = canvas.getContext("2d");
+        
+        // Draw a Line
+        ctx.beginPath();
+        ctx.moveTo(50, 50);
+        ctx.lineTo(200, 150);
+        ctx.stroke();
+        
+        // Draw a Rectangle
+        ctx.fillStyle = "blue";
+        ctx.fillRect(50, 50, 150, 100);
+        
+        // Draw a Circle
+        ctx.beginPath();
+        ctx.arc(300, 150, 50, 0, 2 * Math.PI);
+        ctx.fillStyle = "red";
+        ctx.fill();
+        ctx.stroke();
+        
+        // Draw Text
+        ctx.font = "20px Arial";
+        ctx.fillStyle = "green";
+        ctx.fillText("Hello Canvas!", 100, 30);
+        
+        // Animation - Moving Ball
+        let x = 50, y = 250;
+        function animate() {
+            ctx.clearRect(0, 200, canvas.width, canvas.height); // Clear bottom part
+            ctx.beginPath();
+            ctx.arc(x, y, 20, 0, 2 * Math.PI);
+            ctx.fillStyle = "orange";
+            ctx.fill();
+            x += 2;
+            if (x > canvas.width) x = 0;
+            requestAnimationFrame(animate);
+        }
+        animate();
+    </script>
+</body>
+</html>

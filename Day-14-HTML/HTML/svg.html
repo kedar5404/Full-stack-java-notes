@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SVG Example</title>
+</head>
+<body>
+    <h1 style="text-align: center;">SVG Example - Shapes and Animation</h1>
+    
+    <svg width="400" height="300" style="border:1px solid black; display: block; margin: auto;">
+        <!-- Rectangle -->
+        <rect x="50" y="20" width="100" height="50" fill="green" />
+        
+        <!-- Circle -->
+        <circle cx="200" cy="70" r="40" fill="blue" />
+        
+        <!-- Ellipse -->
+        <ellipse cx="300" cy="70" rx="50" ry="30" fill="red" />
+        
+        <!-- Line -->
+        <line x1="50" y1="150" x2="350" y2="150" stroke="black" stroke-width="3" />
+        
+        <!-- Polygon (Triangle) -->
+        <polygon points="150,200 200,250 100,250" fill="purple" />
+        
+        <!-- Text -->
+        <text x="50" y="280" font-size="20" fill="black">Hello SVG</text>
+        
+        <!-- Animated Circle -->
+        <circle cx="50" cy="250" r="20" fill="orange">
+            <animate attributeName="cx" from="50" to="350" dur="2s" repeatCount="indefinite" />
+        </circle>
+    </svg>
+</body>
+</html>

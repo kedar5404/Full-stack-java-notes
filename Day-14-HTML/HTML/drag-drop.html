@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Drag & Drop API Example</title>
+    <style>
+        #dragItem {
+            width: 100px;
+            cursor: grab;
+        }
+        #dropZone {
+            width: 200px;
+            height: 200px;
+            border: 2px dashed black;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1 style="text-align: center;">Drag & Drop API Example</h1>
+    <p>Drag the image below and drop it into the box.</p>
+    
+    <!-- Draggable Item -->
+    <img id="dragItem" src="cap.png" draggable="true" />
+    
+    <!-- Drop Zone -->
+    <div id="dropZone"></div>
+    
+    <script>
+        let item = document.getElementById("dragItem");
+        let dropZone = document.getElementById("dropZone");
+        
+        // Drag Start Event
+        item.addEventListener("dragstart", (event) => {
+            event.dataTransfer.setData("text", event.target.id);
+        });
+        
+        // Drag Over Event
+        dropZone.addEventListener("dragover", (event) => {
+            event.preventDefault();
+        });
+        
+        // Drop Event
+        dropZone.addEventListener("drop", (event) => {
+            event.preventDefault();
+            let data = event.dataTransfer.getData("text");
+            let draggedItem = document.getElementById(data);
+            dropZone.appendChild(draggedItem);
+        });
+    </script>
+</body>
+</html>

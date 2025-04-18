@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Local & Session Storage Example</title>
+    <style>
+        body { text-align: center; font-family: Arial, sans-serif; }
+        button { margin: 10px; padding: 10px; font-size: 16px; }
+    </style>
+</head>
+<body>
+    <h1>Local & Session Storage Example</h1>
+    <input type="text" id="inputData" placeholder="Enter some data" />
+    <br>
+    
+    <button onclick="saveToLocalStorage()">Save to Local Storage</button>
+    <button onclick="getFromLocalStorage()">Get from Local Storage</button>
+    <button onclick="clearLocalStorage()">Clear Local Storage</button>
+    <br>
+    
+    <button onclick="saveToSessionStorage()">Save to Session Storage</button>
+    <button onclick="getFromSessionStorage()">Get from Session Storage</button>
+    <button onclick="clearSessionStorage()">Clear Session Storage</button>
+    
+    <p id="output"></p>
+    
+    <script>
+        function saveToLocalStorage() {
+            let data = document.getElementById("inputData").value;
+            localStorage.setItem("savedData", data);
+            alert("Data saved to Local Storage!");
+        }
+
+        function getFromLocalStorage() {
+            let data = localStorage.getItem("savedData");
+            document.getElementById("output").innerText = data ? `Local Storage: ${data}` : "No data found in Local Storage.";
+        }
+
+        function clearLocalStorage() {
+            localStorage.removeItem("savedData");
+            alert("Local Storage cleared!");
+        }
+
+        function saveToSessionStorage() {
+            let data = document.getElementById("inputData").value;
+            sessionStorage.setItem("sessionData", data);
+            alert("Data saved to Session Storage!");
+        }
+
+        function getFromSessionStorage() {
+            let data = sessionStorage.getItem("sessionData");
+            document.getElementById("output").innerText = data ? `Session Storage: ${data}` : "No data found in Session Storage.";
+        }
+
+        function clearSessionStorage() {
+            sessionStorage.removeItem("sessionData");
+            alert("Session Storage cleared!");
+        }
+    </script>
+</body>
+</html>

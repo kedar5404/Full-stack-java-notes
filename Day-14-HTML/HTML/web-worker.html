@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Worker Example</title>
+    <style>
+        body { text-align: center; font-family: Arial, sans-serif; }
+        button { margin: 10px; padding: 10px; font-size: 16px; }
+    </style>
+</head>
+<body>
+    <h1>Web Worker Example</h1>
+    <button onclick="startWorker()">Start Worker</button>
+    <button onclick="stopWorker()">Stop Worker</button>
+    <p id="result">Waiting for result...</p>
+    
+    <script>
+        let worker;
+        
+        function startWorker() {
+            if (typeof(Worker) !== "undefined") {
+                if (!worker) {
+                    worker = new Worker("worker.js");
+                }
+                
+                worker.onmessage = function(event) {
+                    document.getElementById("result").innerText = "Worker Result: " + event.data;
+                };
+                
+                worker.postMessage("start");
+            } else {
+                document.getElementById("result").innerText = "Web Workers are not supported in your browser.";
+            }
+        }
+        
+        function stopWorker() {
+            if (worker) {
+                worker.terminate();
+                worker = null;
+                document.getElementById("result").innerText = "Worker Stopped.";
+            }
+        }
+    </script>
+</body>
+</html>
