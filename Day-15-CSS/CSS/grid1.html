@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced CSS Grid Example</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            grid-template-rows: auto;
+            gap: 10px;
+            width: 80%;
+            margin: 20px auto;
+            border: 2px solid black;
+            padding: 10px;
+        }
+        .grid-item {
+            background-color: lightblue;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 20px;
+            font-weight: bold;
+            border: 2px solid darkblue;
+            padding: 20px;
+        }
+        .wide {
+            grid-column: span 2;
+        }
+        .tall {
+            grid-row: span 2;
+        }
+        @media (max-width: 600px) {
+            .grid-container {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h2>Advanced CSS Grid Example</h2>
+    <p>This example demonstrates a responsive and asymmetrical grid layout.</p>
+    <div class="grid-container">
+        <div class="grid-item">1</div>
+        <div class="grid-item wide">2 (Wide)</div>
+        <div class="grid-item">3</div>
+        <div class="grid-item tall">4 (Tall)</div>
+        <div class="grid-item">5</div>
+        <div class="grid-item">6</div>
+    </div>
+</body>
+</html>

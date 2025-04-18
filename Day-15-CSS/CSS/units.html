@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Units Example</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        
+        /* Absolute unit: px */
+        .px-box {
+            width: 200px;
+            height: 100px;
+            background-color: lightblue;
+            font-size: 16px;
+            text-align: center;
+            line-height: 100px;
+            margin-bottom: 10px;
+        }
+        
+        /* Relative unit: % */
+        .percent-box {
+            width: 50%;
+            height: 100px;
+            background-color: lightcoral;
+            font-size: 120%;
+            text-align: center;
+            line-height: 100px;
+            margin-bottom: 10px;
+        }
+        
+        /* Relative unit: em */
+        .em-box {
+            width: 20em;
+            height: 5em;
+            background-color: lightgreen;
+            font-size: 1.5em;
+            text-align: center;
+            line-height: 5em;
+            margin-bottom: 10px;
+        }
+        
+        /* Relative unit: rem */
+        .rem-box {
+            width: 30rem;
+            height: 5rem;
+            background-color: lightsalmon;
+            font-size: 2rem;
+            text-align: center;
+            line-height: 5rem;
+            margin-bottom: 10px;
+        }
+        
+        /* Viewport units */
+        .vw-box {
+            width: 50vw;
+            height: 20vh;
+            background-color: lightgoldenrodyellow;
+            font-size: 2vw;
+            text-align: center;
+            line-height: 20vh;
+        }
+    </style>
+</head>
+<body>
+    <h2>CSS Units Example</h2>
+    <div class="px-box">200px Box</div>
+    <div class="percent-box">50% Width Box</div>
+    <div class="em-box">20em Width Box</div>
+    <div class="rem-box">30rem Width Box</div>
+    <div class="vw-box">50vw Width, 20vh Height</div>
+</body>
+</html>

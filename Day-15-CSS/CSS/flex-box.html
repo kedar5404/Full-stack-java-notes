@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox Layout Example</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+        .flex-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 300px;
+            border: 2px solid black;
+            padding: 10px;
+            margin-bottom: 20px;
+        }
+        .flex-column {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            align-items: center;
+            height: 300px;
+            border: 2px solid black;
+            padding: 10px;
+        }
+        .flex-item {
+            width: 100px;
+            height: 100px;
+            color: white;
+            text-align: center;
+            line-height: 100px;
+            font-weight: bold;
+        }
+        .item1 { background-color: red; }
+        .item2 { background-color: blue; }
+        .item3 { background-color: green; }
+    </style>
+</head>
+<body>
+    <h2>Flexbox Example</h2>
+    <p>This example demonstrates Flexbox in both row and column directions.</p>
+    
+    <h3>Row Layout</h3>
+    <div class="flex-row">
+        <div class="flex-item item1">Item 1</div>
+        <div class="flex-item item2">Item 2</div>
+        <div class="flex-item item3">Item 3</div>
+    </div>
+    
+    <h3>Column Layout</h3>
+    <div class="flex-column">
+        <div class="flex-item item1">Item 1</div>
+        <div class="flex-item item2">Item 2</div>
+        <div class="flex-item item3">Item 3</div>
+    </div>
+</body>
+</html>

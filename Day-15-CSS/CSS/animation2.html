@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Text & Button Animation</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #2c3e50;
+            font-family: Arial, sans-serif;
+            color: white;
+            text-align: center;
+        }
+
+        /* Glowing Text Animation */
+        .animated-text {
+            font-size: 32px;
+            font-weight: bold;
+            animation: glowText 2s ease-in-out infinite alternate;
+        }
+
+        @keyframes glowText {
+            0% { color: #ffffff; text-shadow: 0 0 5px #ffffff; }
+            100% { color: #f1c40f; text-shadow: 0 0 15px #f1c40f; }
+        }
+
+        /* Glowing Button Animation */
+        .glow-button {
+            margin-top: 20px;
+            padding: 15px 30px;
+            font-size: 18px;
+            font-weight: bold;
+            color: white;
+            background: #e74c3c;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+            animation: glowEffect 1.5s infinite alternate;
+        }
+
+        @keyframes glowEffect {
+            0% { box-shadow: 0 0 5px #e74c3c; }
+            100% { box-shadow: 0 0 20px #e74c3c; }
+        }
+
+        .glow-button:hover {
+            transform: scale(1.1);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="animated-text">Welcome to CSS Animations! 🚀</div>
+    <button class="glow-button">Hover Me</button>
+
+</body>
+</html>

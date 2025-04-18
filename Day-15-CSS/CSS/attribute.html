@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Attribute Selectors Example</title>
+    <style>
+        /* Exact Match Selector */
+        input[type="text"] {
+            border: 2px solid blue;
+            padding: 5px;
+        }
+        
+        /* Starts With Selector */
+        a[href^="#"] {
+            color: green;
+            font-weight: bold;
+        }
+        
+        /* Ends With Selector */
+        img[src$=".png"] {
+            border-radius: 10px;
+            border: 3px solid red;
+            width: 150px;
+        }
+        
+        /* Contains Selector */
+        input[placeholder*="name"] {
+            background-color: lightyellow;
+        }
+    </style>
+</head>
+<body>
+    <h2>CSS Attribute Selectors Example</h2>
+    
+    <input type="text" placeholder="Enter text here">
+    <br><br>
+    
+    <a href="#section1">Jump to Section 1</a>
+    <br><br>
+    
+    <img src="cap.png" alt="Example Image">
+    <br><br>
+    
+    <input type="text" placeholder="Enter your name">
+    
+</body>
+</html>

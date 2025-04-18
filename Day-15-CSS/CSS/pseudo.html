@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Pseudo-Classes, Pseudo-Elements & Combinators Example</title>
+    <style>
+        /* :hover - Change button color on hover */
+        button:hover {
+            background-color: green;
+            color: white;
+        }
+        
+        /* :focus - Highlight input field when focused */
+        input:focus {
+            border: 2px solid blue;
+            background-color: lightgray;
+        }
+        
+        /* :nth-child(n) - Style every odd list item */
+        li:nth-child(odd) {
+            background-color: lightyellow;
+        }
+        
+        /* :first-of-type - Style the first paragraph in a container */
+        p:first-of-type {
+            font-weight: bold;
+            color: red;
+        }
+        
+        /* ::before - Insert content before an element */
+        h2::before {
+            content: "🔥 ";
+            color: red;
+        }
+        
+        /* ::after - Insert content after an element */
+        h2::after {
+            content: " ✨";
+            color: purple;
+        }
+        
+        /* Styling for demonstration */
+        .box::before {
+            content: "[Start] ";
+            color: blue;
+            font-weight: bold;
+        }
+        .box::after {
+            content: " [End]";
+            color: green;
+            font-weight: bold;
+        }
+        
+        /* Child Combinator (>) - Styles direct children only */
+        div > p {
+            color: blue;
+            font-style: italic;
+        }
+        
+        /* Adjacent Sibling Combinator (+) - Styles the first p after h1 */
+        h1 + p {
+            font-weight: bold;
+            color: rgb(0, 255, 98);
+        }
+        
+        /* General Sibling Combinator (~) - Styles all p after h1 */
+        h1 ~ p {
+            color: green;
+        }
+    </style>
+</head>
+<body>
+    <h2>CSS Pseudo-Classes, Pseudo-Elements & Combinators Example</h2>
+    
+    <button>Hover over me</button>
+    <br><br>
+    
+    <input type="text" placeholder="Click to focus">
+    <br><br>
+    
+    <ul>
+        <li>Item 1</li>
+        <li>Item 2</li>
+        <li>Item 3</li>
+        <li>Item 4</li>
+    </ul>
+    <br>
+    
+    <div>
+        <p>This is the first paragraph (styled with :first-of-type).</p>
+        <p>This is another paragraph.</p>
+    </div>
+    
+    <div class="box">This is a div with ::before and ::after.</div>
+    
+    <h1>Heading 1</h1>
+    <p>Paragraph 1 (styled with adjacent sibling combinator).</p>
+    <p>Paragraph 2 (styled with general sibling combinator).</p>
+    <p>Paragraph 3 (styled with general sibling combinator).</p>
+    
+    <div>
+        <p>Direct child paragraph inside div (styled with child combinator).</p>
+        <section>
+            <p>Nested paragraph inside section (NOT styled with child combinator).</p>
+        </section>
+    </div>
+</body>
+</html>

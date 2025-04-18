@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox & Grid Combined Example</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: Arial, sans-serif;
+        }
+        
+        /* Grid Layout for Page Structure */
+        .grid-container {
+            display: grid;
+            grid-template-rows: auto auto 1fr auto;
+            grid-template-columns: 250px 1fr;
+            grid-template-areas:
+                "header header"
+                "nav nav"
+                "sidebar content"
+                "footer footer";
+            min-height: 100vh;
+        }
+        
+        header {
+            grid-area: header;
+            background: #333;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        
+        nav {
+            grid-area: nav;
+            background: #555;
+            padding: 15px;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 10px;
+            background: #777;
+            border-radius: 5px;
+        }
+        
+        aside {
+            grid-area: sidebar;
+            background: #f4f4f4;
+            padding: 20px;
+        }
+        
+        main {
+            grid-area: content;
+            padding: 20px;
+        }
+        
+        .card-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+        }
+        .card {
+            background: lightblue;
+            padding: 20px;
+            border-radius: 5px;
+            text-align: center;
+            flex: 1 1 250px;
+        }
+        
+        footer {
+            grid-area: footer;
+            background: #333;
+            color: white;
+            text-align: center;
+            padding: 15px;
+        }
+        
+        @media (max-width: 768px) {
+            .grid-container {
+                grid-template-columns: 1fr;
+                grid-template-areas:
+                    "header"
+                    "nav"
+                    "content"
+                    "sidebar"
+                    "footer";
+            }
+            aside {
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="grid-container">
+        <header>
+            <h1>My Website</h1>
+        </header>
+        
+        <nav>
+            <a href="#">Home</a>
+            <a href="#">About</a>
+            <a href="#">Services</a>
+            <a href="#">Contact</a>
+        </nav>
+        
+        <aside>
+            <h2>Sidebar</h2>
+            <p>Useful links and information.</p>
+        </aside>
+        
+        <main>
+            <h2>Main Content</h2>
+            <div class="card-container">
+                <div class="card">Card 1</div>
+                <div class="card">Card 2</div>
+                <div class="card">Card 3</div>
+            </div>
+        </main>
+        
+        <footer>
+            <p>&copy; 2025 My Website. All rights reserved.</p>
+        </footer>
+    </div>
+</body>
+</html>

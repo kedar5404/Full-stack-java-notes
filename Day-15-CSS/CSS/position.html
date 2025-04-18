@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Positioning, Display, Float, Clear & Overflow Example</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        .container {
+            position: relative;
+            width: 80%;
+            height: 400px;
+            border: 2px solid black;
+            margin: 20px auto;
+        }
+        .box {
+            width: 100px;
+            height: 100px;
+            color: white;
+            text-align: center;
+            line-height: 100px;
+            font-weight: bold;
+        }
+        
+        /* Static Positioning (Default) */
+        .static {
+            background-color: gray;
+        }
+        
+        /* Relative Positioning */
+        .relative {
+            position: relative;
+            background-color: blue;
+            left: 50px;
+            top: 20px;
+        }
+        
+        /* Absolute Positioning */
+        .absolute {
+            position: absolute;
+            background-color: red;
+            top: 50px;
+            left: 200px;
+        }
+        
+        /* Fixed Positioning */
+        .fixed {
+            position: fixed;
+            background-color: green;
+            top: 20px;
+            right: 20px;
+        }
+        
+        /* Sticky Positioning */
+        .sticky {
+            position: sticky;
+            background-color: orange;
+            top: 0;
+        }
+        
+        /* Display: block */
+        .block-element {
+            display: block;
+            background-color: lightblue;
+            width: 200px;
+            padding: 10px;
+            margin-bottom: 10px;
+        }
+        
+        /* Display: inline */
+        .inline-element {
+            display: inline;
+            background-color: lightgreen;
+            padding: 5px;
+            margin: 5px;
+        }
+        
+        /* Display: inline-block */
+        .inline-block-element {
+            display: inline-block;
+            background-color: lightcoral;
+            width: 150px;
+            height: 50px;
+            padding: 5px;
+            margin: 5px;
+        }
+        
+        /* Display: none */
+        .hidden-element {
+            display: none;
+        }
+        
+        /* Float */
+        .float-left {
+            float: left;
+            background-color: lightgray;
+            width: 150px;
+            padding: 10px;
+            margin-right: 10px;
+        }
+        
+        .float-right {
+            float: right;
+            background-color: lightgray;
+            width: 150px;
+            padding: 10px;
+            margin-left: 10px;
+        }
+        
+        /* Clearfix */
+        .clearfix::after {
+            content: "";
+            display: block;
+            clear: both;
+        }
+        
+        /* Overflow Examples */
+        .overflow-container {
+            width: 300px;
+            height: 100px;
+            border: 2px solid black;
+            margin-bottom: 20px;
+            padding: 10px;
+        }
+        .visible { overflow: visible; background-color: lightyellow; }
+        .hidden { overflow: hidden; background-color: lightpink; }
+        .scroll { overflow: scroll; background-color: lightcyan; }
+        .auto { overflow: auto; background-color: lightgreen; }
+    </style>
+</head>
+<body>
+    <h2>CSS Positioning & Display Example</h2>
+    
+    <div class="box static">Static</div>
+    <div class="box relative">Relative</div>
+    
+    <div class="container">
+        <div class="box absolute">Absolute</div>
+    </div>
+    
+    <div class="box fixed">Fixed</div>
+    
+    <div class="box sticky">Sticky (Scroll to see)</div>
+    
+    <p style="height: 1000px;">Scroll down to test the sticky element.</p>
+    
+    <h2>CSS Display Property</h2>
+    
+    <div class="block-element">Block Element</div>
+    
+    <span class="inline-element">Inline Element 1</span>
+    <span class="inline-element">Inline Element 2</span>
+    
+    <div class="inline-block-element">Inline-Block 1</div>
+    <div class="inline-block-element">Inline-Block 2</div>
+    
+    <p class="hidden-element">This paragraph is hidden using display: none.</p>
+    
+    <h2>CSS Float & Clear Example</h2>
+    
+    <div class="float-left">Float Left</div>
+    <div class="float-right">Float Right</div>
+    
+    <div class="clearfix"></div>
+    
+    <p>This paragraph is below the floated elements due to the clearfix.</p>
+    
+    <h2>CSS Overflow Example</h2>
+    
+    <div class="overflow-container visible">
+        <strong>Overflow: visible</strong><br>
+        This content will overflow outside the container.
+    </div>
+    
+    <div class="overflow-container hidden">
+        <strong>Overflow: hidden</strong><br>
+        This content is hidden if it exceeds the container size.
+    </div>
+    
+    <div class="overflow-container scroll">
+        <strong>Overflow: scroll</strong><br>
+        This content will have a scrollbar if it overflows.
+    </div>
+    
+    <div class="overflow-container auto">
+        <strong>Overflow: auto</strong><br>
+        A scrollbar appears only if the content overflows.
+    </div>
+</body>
+</html>

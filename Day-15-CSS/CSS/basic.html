@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Basic Selectors Example</title>
+    <style>
+        /* Element Selector */
+        p {
+            color: blue;
+            font-size: 18px;
+        }
+        
+        /* ID Selector */
+        #main-heading {
+            color: red;
+            text-align: center;
+        }
+        
+        /* Class Selector */
+        .highlight {
+            background-color: yellow;
+            font-weight: bold;
+        }
+        
+        /* Universal Selector */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        /* Group Selector */
+        h1, h2, p {
+            font-family: Arial, sans-serif;
+        }
+        
+        /* Attribute Selector */
+        input[required] {
+            border: 2px solid red;
+        }
+        
+        /* Attribute Value Selector */
+        a[target="_blank"] {
+            color: green;
+        }
+    </style>
+</head>
+<body>
+    <h1 id="main-heading">CSS Basic Selectors Example</h1>
+    <h2>Subheading</h2>
+    <p>This is a paragraph styled using an element selector.</p>
+    <p class="highlight">This paragraph has a highlighted background using a class selector.</p>
+    <a href="#">Regular Link</a>
+    <a href="#" target="_blank">Opens in New Tab</a>
+    <br><br>
+    <input type="text" required placeholder="Required field">
+</body>
+</html>

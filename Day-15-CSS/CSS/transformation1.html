@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Transformations</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f4f4f4;
+        }
+
+        .box {
+            width: 150px;
+            height: 150px;
+            background: #3498db;
+            color: white;
+            font-size: 18px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 10px;
+            transition: transform 0.5s ease-in-out;
+        }
+
+        .box:hover {
+            transform: scale(1.2) rotate(15deg) skew(10deg, 5deg) translate(20px, 10px);
+            background: #e74c3c;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="box">Hover Me</div>
+
+</body>
+</html>
