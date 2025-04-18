@@ -1,0 +1,34 @@
+{
+  "categories": [
+    {
+      "categoryId": 1,
+      "categoryName": "Electronics",
+      "categoryDetails": "Devices like mobile phones, laptops, and TVs.",
+      "id": "1270"
+    },
+    {
+      "categoryId": 2,
+      "categoryName": "Furniture",
+      "categoryDetails": "Tables, chairs, sofas, and beds.",
+      "id": "5653"
+    },
+    {
+      "categoryId": 3,
+      "categoryName": "Groceries",
+      "categoryDetails": "Daily essentials including food and beverages.",
+      "id": "801b"
+    },
+    {
+      "categoryId": 4,
+      "categoryName": "Clothing",
+      "categoryDetails": "Apparel for men, women, and children.",
+      "id": "fc2d"
+    },
+    {
+      "categoryId": 5,
+      "categoryName": "Books",
+      "categoryDetails": "Novels, textbooks, and educational material.",
+      "id": "3d32"
+    }
+  ]
+}

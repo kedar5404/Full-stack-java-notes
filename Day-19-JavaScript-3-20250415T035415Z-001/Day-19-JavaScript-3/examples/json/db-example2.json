@@ -1,0 +1,481 @@
+{
+    "courses": [
+        {
+            "courseId": 1,
+            "courseName": "Web Development",
+            "courseDetails": "HTML, CSS, JavaScript, React"
+        },
+        {
+            "courseId": 2,
+            "courseName": "Data Science",
+            "courseDetails": "Python, Pandas, Machine Learning"
+        },
+        {
+            "courseId": 3,
+            "courseName": "Digital Marketing",
+            "courseDetails": "SEO, SEM, Content Strategy"
+        },
+        {
+            "courseId": 4,
+            "courseName": "Android Development",
+            "courseDetails": "Java, Kotlin, Firebase"
+        },
+        {
+            "courseId": 5,
+            "courseName": "Cloud Computing",
+            "courseDetails": "AWS, Azure, GCP"
+        }
+    ],
+    "students": [
+        {
+            "studentId": 1,
+            "name": "Amit",
+            "courseId": 4,
+            "joiningDate": "2022-11-26",
+            "email": "amit@example.com",
+            "mobile": "9619895498",
+            "feesPaid": 54047
+        },
+        {
+            "studentId": 2,
+            "name": "Priya",
+            "courseId": 2,
+            "joiningDate": "2020-08-25",
+            "email": "priya@example.com",
+            "mobile": "9964333252",
+            "feesPaid": 77830
+        },
+        {
+            "studentId": 3,
+            "name": "Raj",
+            "courseId": 2,
+            "joiningDate": "2021-04-29",
+            "email": "raj@example.com",
+            "mobile": "9871960769",
+            "feesPaid": 24986
+        },
+        {
+            "studentId": 4,
+            "name": "Anita",
+            "courseId": 2,
+            "joiningDate": "2020-12-12",
+            "email": "anita@example.com",
+            "mobile": "9925197954",
+            "feesPaid": 58213
+        },
+        {
+            "studentId": 5,
+            "name": "Vikram",
+            "courseId": 3,
+            "joiningDate": "2021-12-26",
+            "email": "vikram@example.com",
+            "mobile": "9230502301",
+            "feesPaid": 58160
+        },
+        {
+            "studentId": 6,
+            "name": "Sneha",
+            "courseId": 3,
+            "joiningDate": "2021-02-04",
+            "email": "sneha@example.com",
+            "mobile": "9192727417",
+            "feesPaid": 48536
+        },
+        {
+            "studentId": 7,
+            "name": "Rohan",
+            "courseId": 2,
+            "joiningDate": "2023-05-07",
+            "email": "rohan@example.com",
+            "mobile": "9781127856",
+            "feesPaid": 52835
+        },
+        {
+            "studentId": 8,
+            "name": "Kavita",
+            "courseId": 2,
+            "joiningDate": "2023-03-30",
+            "email": "kavita@example.com",
+            "mobile": "9765961345",
+            "feesPaid": 14289
+        },
+        {
+            "studentId": 9,
+            "name": "Arjun",
+            "courseId": 4,
+            "joiningDate": "2023-10-08",
+            "email": "arjun@example.com",
+            "mobile": "9151688344",
+            "feesPaid": 29203
+        },
+        {
+            "studentId": 10,
+            "name": "Neha",
+            "courseId": 1,
+            "joiningDate": "2022-04-08",
+            "email": "neha@example.com",
+            "mobile": "9448769613",
+            "feesPaid": 66286
+        },
+        {
+            "studentId": 11,
+            "name": "Suresh",
+            "courseId": 2,
+            "joiningDate": "2021-09-08",
+            "email": "suresh@example.com",
+            "mobile": "9620317206",
+            "feesPaid": 13927
+        },
+        {
+            "studentId": 12,
+            "name": "Pooja",
+            "courseId": 4,
+            "joiningDate": "2023-04-11",
+            "email": "pooja@example.com",
+            "mobile": "9571157782",
+            "feesPaid": 36632
+        },
+        {
+            "studentId": 13,
+            "name": "Nikhil",
+            "courseId": 1,
+            "joiningDate": "2023-08-23",
+            "email": "nikhil@example.com",
+            "mobile": "9277048054",
+            "feesPaid": 55372
+        },
+        {
+            "studentId": 14,
+            "name": "Divya",
+            "courseId": 5,
+            "joiningDate": "2023-05-04",
+            "email": "divya@example.com",
+            "mobile": "9671482675",
+            "feesPaid": 47597
+        },
+        {
+            "studentId": 15,
+            "name": "Karan",
+            "courseId": 2,
+            "joiningDate": "2023-06-28",
+            "email": "karan@example.com",
+            "mobile": "9710257670",
+            "feesPaid": 49746
+        },
+        {
+            "studentId": 16,
+            "name": "Meera",
+            "courseId": 5,
+            "joiningDate": "2022-10-04",
+            "email": "meera@example.com",
+            "mobile": "9661100314",
+            "feesPaid": 15108
+        },
+        {
+            "studentId": 17,
+            "name": "Ajay",
+            "courseId": 4,
+            "joiningDate": "2023-02-19",
+            "email": "ajay@example.com",
+            "mobile": "9300155279",
+            "feesPaid": 25526
+        },
+        {
+            "studentId": 18,
+            "name": "Simran",
+            "courseId": 3,
+            "joiningDate": "2022-05-11",
+            "email": "simran@example.com",
+            "mobile": "9724736994",
+            "feesPaid": 65647
+        },
+        {
+            "studentId": 19,
+            "name": "Varun",
+            "courseId": 5,
+            "joiningDate": "2021-06-05",
+            "email": "varun@example.com",
+            "mobile": "9167702433",
+            "feesPaid": 36228
+        },
+        {
+            "studentId": 20,
+            "name": "Anjali",
+            "courseId": 5,
+            "joiningDate": "2023-06-19",
+            "email": "anjali@example.com",
+            "mobile": "9584551764",
+            "feesPaid": 71835
+        },
+        {
+            "studentId": 21,
+            "name": "Deepak",
+            "courseId": 5,
+            "joiningDate": "2023-09-28",
+            "email": "deepak@example.com",
+            "mobile": "9774574529",
+            "feesPaid": 25376
+        },
+        {
+            "studentId": 22,
+            "name": "Shalini",
+            "courseId": 5,
+            "joiningDate": "2023-05-14",
+            "email": "shalini@example.com",
+            "mobile": "9514818903",
+            "feesPaid": 29717
+        },
+        {
+            "studentId": 23,
+            "name": "Yash",
+            "courseId": 4,
+            "joiningDate": "2023-05-19",
+            "email": "yash@example.com",
+            "mobile": "9596173430",
+            "feesPaid": 77891
+        },
+        {
+            "studentId": 24,
+            "name": "Ritika",
+            "courseId": 5,
+            "joiningDate": "2021-08-20",
+            "email": "ritika@example.com",
+            "mobile": "9190889923",
+            "feesPaid": 47670
+        },
+        {
+            "studentId": 25,
+            "name": "Nitin",
+            "courseId": 1,
+            "joiningDate": "2020-01-14",
+            "email": "nitin@example.com",
+            "mobile": "9147858208",
+            "feesPaid": 64477
+        },
+        {
+            "studentId": 26,
+            "name": "Isha",
+            "courseId": 1,
+            "joiningDate": "2023-08-26",
+            "email": "isha@example.com",
+            "mobile": "9874371461",
+            "feesPaid": 10689
+        },
+        {
+            "studentId": 27,
+            "name": "Harsh",
+            "courseId": 1,
+            "joiningDate": "2020-02-01",
+            "email": "harsh@example.com",
+            "mobile": "9871067752",
+            "feesPaid": 50677
+        },
+        {
+            "studentId": 28,
+            "name": "Preeti",
+            "courseId": 3,
+            "joiningDate": "2023-03-01",
+            "email": "preeti@example.com",
+            "mobile": "9484404035",
+            "feesPaid": 60649
+        },
+        {
+            "studentId": 29,
+            "name": "Manoj",
+            "courseId": 5,
+            "joiningDate": "2023-08-28",
+            "email": "manoj@example.com",
+            "mobile": "9192958645",
+            "feesPaid": 64178
+        },
+        {
+            "studentId": 30,
+            "name": "Sonam",
+            "courseId": 1,
+            "joiningDate": "2023-12-02",
+            "email": "sonam@example.com",
+            "mobile": "9360961449",
+            "feesPaid": 25040
+        },
+        {
+            "studentId": 31,
+            "name": "Rahul",
+            "courseId": 2,
+            "joiningDate": "2020-10-06",
+            "email": "rahul@example.com",
+            "mobile": "9769544394",
+            "feesPaid": 12152
+        },
+        {
+            "studentId": 32,
+            "name": "Tanvi",
+            "courseId": 4,
+            "joiningDate": "2021-08-03",
+            "email": "tanvi@example.com",
+            "mobile": "9561203654",
+            "feesPaid": 47467
+        },
+        {
+            "studentId": 33,
+            "name": "Gaurav",
+            "courseId": 2,
+            "joiningDate": "2020-05-26",
+            "email": "gaurav@example.com",
+            "mobile": "9856078275",
+            "feesPaid": 70209
+        },
+        {
+            "studentId": 34,
+            "name": "Swati",
+            "courseId": 3,
+            "joiningDate": "2023-10-12",
+            "email": "swati@example.com",
+            "mobile": "9493037848",
+            "feesPaid": 24371
+        },
+        {
+            "studentId": 35,
+            "name": "Kapil",
+            "courseId": 4,
+            "joiningDate": "2023-01-11",
+            "email": "kapil@example.com",
+            "mobile": "9562001212",
+            "feesPaid": 58559
+        },
+        {
+            "studentId": 36,
+            "name": "Shruti",
+            "courseId": 5,
+            "joiningDate": "2022-08-28",
+            "email": "shruti@example.com",
+            "mobile": "9728308326",
+            "feesPaid": 75086
+        },
+        {
+            "studentId": 37,
+            "name": "Tarun",
+            "courseId": 3,
+            "joiningDate": "2020-02-12",
+            "email": "tarun@example.com",
+            "mobile": "9131143096",
+            "feesPaid": 67008
+        },
+        {
+            "studentId": 38,
+            "name": "Riya",
+            "courseId": 1,
+            "joiningDate": "2022-08-14",
+            "email": "riya@example.com",
+            "mobile": "9378980035",
+            "feesPaid": 51049
+        },
+        {
+            "studentId": 39,
+            "name": "Kunal",
+            "courseId": 5,
+            "joiningDate": "2024-01-11",
+            "email": "kunal@example.com",
+            "mobile": "9743653141",
+            "feesPaid": 17364
+        },
+        {
+            "studentId": 40,
+            "name": "Aisha",
+            "courseId": 1,
+            "joiningDate": "2021-12-23",
+            "email": "aisha@example.com",
+            "mobile": "9508242399",
+            "feesPaid": 55402
+        },
+        {
+            "studentId": 41,
+            "name": "Dhruv",
+            "courseId": 4,
+            "joiningDate": "2024-02-06",
+            "email": "dhruv@example.com",
+            "mobile": "9116626393",
+            "feesPaid": 57086
+        },
+        {
+            "studentId": 42,
+            "name": "Tanya",
+            "courseId": 2,
+            "joiningDate": "2022-01-24",
+            "email": "tanya@example.com",
+            "mobile": "9829017344",
+            "feesPaid": 38836
+        },
+        {
+            "studentId": 43,
+            "name": "Siddharth",
+            "courseId": 3,
+            "joiningDate": "2024-01-15",
+            "email": "siddharth@example.com",
+            "mobile": "9659170453",
+            "feesPaid": 25940
+        },
+        {
+            "studentId": 44,
+            "name": "Juhi",
+            "courseId": 2,
+            "joiningDate": "2023-02-14",
+            "email": "juhi@example.com",
+            "mobile": "9859304419",
+            "feesPaid": 68891
+        },
+        {
+            "studentId": 45,
+            "name": "Aditya",
+            "courseId": 3,
+            "joiningDate": "2022-10-19",
+            "email": "aditya@example.com",
+            "mobile": "9230440155",
+            "feesPaid": 74193
+        },
+        {
+            "studentId": 46,
+            "name": "Payal",
+            "courseId": 3,
+            "joiningDate": "2023-02-12",
+            "email": "payal@example.com",
+            "mobile": "9268719043",
+            "feesPaid": 79826
+        },
+        {
+            "studentId": 47,
+            "name": "Ishan",
+            "courseId": 4,
+            "joiningDate": "2021-12-16",
+            "email": "ishan@example.com",
+            "mobile": "9831760810",
+            "feesPaid": 34172
+        },
+        {
+            "studentId": 48,
+            "name": "Bhavna",
+            "courseId": 3,
+            "joiningDate": "2021-03-28",
+            "email": "bhavna@example.com",
+            "mobile": "9657449393",
+            "feesPaid": 43759
+        },
+        {
+            "studentId": 49,
+            "name": "Naveen",
+            "courseId": 5,
+            "joiningDate": "2020-10-16",
+            "email": "naveen@example.com",
+            "mobile": "9921600793",
+            "feesPaid": 55653
+        },
+        {
+            "studentId": 50,
+            "name": "Lavanya",
+            "courseId": 5,
+            "joiningDate": "2020-10-05",
+            "email": "lavanya@example.com",
+            "mobile": "9983659287",
+            "feesPaid": 50527
+        }
+    ]
+}

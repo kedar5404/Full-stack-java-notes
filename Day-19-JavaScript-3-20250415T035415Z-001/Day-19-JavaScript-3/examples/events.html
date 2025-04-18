@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Event Charts</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+      canvas {
+        max-width: 800px;
+        margin: 30px auto;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>Event Statistics</h2>
+    <canvas id="barChart"></canvas>
+    <canvas id="pieChart"></canvas>
+
+    <script src="js/events.js">
+      const employeesURL = "http://localhost:3000/employees";
+
+      // Generate random colors
+      function generateColor(count) {
+        const colors = [];
+        for (let i = 0; i < count; i++) {
+          const r = Math.floor(Math.random() * 200);
+          const g = Math.floor(Math.random() * 200);
+          const b = Math.floor(Math.random() * 200);
+          colors.push(`rgba(${r}, ${g}, ${b}, 0.7)`);
+        }
+        return colors;
+      }
+
+      fetch(employeesURL)
+        .then(response => response.json())
+        .then(data => {
+          // Count employees per designation
+          const desigCount = {};
+          data.forEach(emp => {
+            if (emp.desig) {
+              desigCount[emp.desig] = (desigCount[emp.desig] || 0) + 1;
+            }
+          });
+
+          const desigLabels = Object.keys(desigCount);
+          const desigValues = Object.values(desigCount);
+          const desigColors = generateColor(desigLabels.length);
+
+          // Bar Chart
+          const barCtx = document.getElementById('barChart').getContext('2d');
+          new Chart(barCtx, {
+            type: 'bar',
+            data: {
+              labels: desigLabels,
+              datasets: [{
+                label: 'Number of Employees',
+                data: desigValues,
+                backgroundColor: desigColors
+              }]
+            },
+            options: {
+              responsive: true,
+              scales: {
+                y: { beginAtZero: true }
+              }
+            }
+          });
+
+          // Pie Chart
+          const pieCtx = document.getElementById('pieChart').getContext('2d');
+          new Chart(pieCtx, {
+            type: 'pie',
+            data: {
+              labels: desigLabels,
+              datasets: [{
+                label: 'Employee Designation Distribution',
+                data: desigValues,
+                backgroundColor: desigColors
+              }]
+            },
+            options: {
+              responsive: true
+            }
+          });
+        })
+        .catch(error => console.error("Error fetching employee data:", error));
+    </script>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> -->
+  </body>
+</html>

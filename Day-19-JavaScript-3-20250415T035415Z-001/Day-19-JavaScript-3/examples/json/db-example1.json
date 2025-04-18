@@ -1,0 +1,266 @@
+{
+    "departments": [
+        {
+            "deptId": 1,
+            "deptName": "HR",
+            "deptDetails": "Handles recruitment and employee welfare."
+        },
+        {
+            "deptId": 2,
+            "deptName": "IT",
+            "deptDetails": "Manages software development and technical infrastructure."
+        },
+        {
+            "deptId": 3,
+            "deptName": "Finance",
+            "deptDetails": "Handles budgeting, payroll, and financial planning."
+        },
+        {
+            "deptId": 4,
+            "deptName": "Marketing",
+            "deptDetails": "Manages advertising, branding, and customer outreach."
+        }
+    ],
+    "employees": [
+        {
+            "empId": 1,
+            "empName": "Amit",
+            "deptId": 2,
+            "designation": "Consultant",
+            "basicSalary": 77684,
+            "dateOfJoining": "2019-06-04"
+        },
+        {
+            "empId": 2,
+            "empName": "Priya",
+            "deptId": 4,
+            "designation": "Consultant",
+            "basicSalary": 65194,
+            "dateOfJoining": "2022-08-05"
+        },
+        {
+            "empId": 3,
+            "empName": "Raj",
+            "deptId": 3,
+            "designation": "Assistant",
+            "basicSalary": 40291,
+            "dateOfJoining": "2018-08-16"
+        },
+        {
+            "empId": 4,
+            "empName": "Anita",
+            "deptId": 3,
+            "designation": "Analyst",
+            "basicSalary": 55759,
+            "dateOfJoining": "2022-02-06"
+        },
+        {
+            "empId": 5,
+            "empName": "Vikram",
+            "deptId": 2,
+            "designation": "Consultant",
+            "basicSalary": 73227,
+            "dateOfJoining": "2018-08-07"
+        },
+        {
+            "empId": 6,
+            "empName": "Sneha",
+            "deptId": 3,
+            "designation": "Analyst",
+            "basicSalary": 74455,
+            "dateOfJoining": "2020-03-06"
+        },
+        {
+            "empId": 7,
+            "empName": "Rohan",
+            "deptId": 3,
+            "designation": "Manager",
+            "basicSalary": 30953,
+            "dateOfJoining": "2018-04-27"
+        },
+        {
+            "empId": 8,
+            "empName": "Kavita",
+            "deptId": 4,
+            "designation": "Analyst",
+            "basicSalary": 34630,
+            "dateOfJoining": "2016-01-07"
+        },
+        {
+            "empId": 9,
+            "empName": "Arjun",
+            "deptId": 2,
+            "designation": "Analyst",
+            "basicSalary": 62415,
+            "dateOfJoining": "2015-02-09"
+        },
+        {
+            "empId": 10,
+            "empName": "Neha",
+            "deptId": 3,
+            "designation": "Analyst",
+            "basicSalary": 40893,
+            "dateOfJoining": "2016-07-13"
+        },
+        {
+            "empId": 11,
+            "empName": "Suresh",
+            "deptId": 4,
+            "designation": "Developer",
+            "basicSalary": 62667,
+            "dateOfJoining": "2021-07-13"
+        },
+        {
+            "empId": 12,
+            "empName": "Pooja",
+            "deptId": 3,
+            "designation": "Assistant",
+            "basicSalary": 56968,
+            "dateOfJoining": "2021-08-18"
+        },
+        {
+            "empId": 13,
+            "empName": "Nikhil",
+            "deptId": 2,
+            "designation": "Engineer",
+            "basicSalary": 30044,
+            "dateOfJoining": "2019-11-17"
+        },
+        {
+            "empId": 14,
+            "empName": "Divya",
+            "deptId": 4,
+            "designation": "Assistant",
+            "basicSalary": 64077,
+            "dateOfJoining": "2019-08-31"
+        },
+        {
+            "empId": 15,
+            "empName": "Karan",
+            "deptId": 2,
+            "designation": "Developer",
+            "basicSalary": 56656,
+            "dateOfJoining": "2015-05-19"
+        },
+        {
+            "empId": 16,
+            "empName": "Meera",
+            "deptId": 4,
+            "designation": "Engineer",
+            "basicSalary": 50427,
+            "dateOfJoining": "2016-09-05"
+        },
+        {
+            "empId": 17,
+            "empName": "Ajay",
+            "deptId": 4,
+            "designation": "Developer",
+            "basicSalary": 56050,
+            "dateOfJoining": "2018-12-20"
+        },
+        {
+            "empId": 18,
+            "empName": "Simran",
+            "deptId": 2,
+            "designation": "Developer",
+            "basicSalary": 62440,
+            "dateOfJoining": "2021-10-13"
+        },
+        {
+            "empId": 19,
+            "empName": "Varun",
+            "deptId": 3,
+            "designation": "Assistant",
+            "basicSalary": 41763,
+            "dateOfJoining": "2022-09-03"
+        },
+        {
+            "empId": 20,
+            "empName": "Anjali",
+            "deptId": 1,
+            "designation": "Manager",
+            "basicSalary": 69779,
+            "dateOfJoining": "2015-08-21"
+        },
+        {
+            "empId": 21,
+            "empName": "Deepak",
+            "deptId": 1,
+            "designation": "Manager",
+            "basicSalary": 58740,
+            "dateOfJoining": "2018-05-09"
+        },
+        {
+            "empId": 22,
+            "empName": "Shalini",
+            "deptId": 4,
+            "designation": "Executive",
+            "basicSalary": 32237,
+            "dateOfJoining": "2018-03-27"
+        },
+        {
+            "empId": 23,
+            "empName": "Yash",
+            "deptId": 2,
+            "designation": "Manager",
+            "basicSalary": 79228,
+            "dateOfJoining": "2018-07-25"
+        },
+        {
+            "empId": 24,
+            "empName": "Ritika",
+            "deptId": 2,
+            "designation": "Executive",
+            "basicSalary": 62145,
+            "dateOfJoining": "2023-02-19"
+        },
+        {
+            "empId": 25,
+            "empName": "Nitin",
+            "deptId": 3,
+            "designation": "Manager",
+            "basicSalary": 55348,
+            "dateOfJoining": "2021-12-15"
+        },
+        {
+            "empId": 26,
+            "empName": "Isha",
+            "deptId": 3,
+            "designation": "Analyst",
+            "basicSalary": 69052,
+            "dateOfJoining": "2020-06-12"
+        },
+        {
+            "empId": 27,
+            "empName": "Harsh",
+            "deptId": 4,
+            "designation": "Assistant",
+            "basicSalary": 61418,
+            "dateOfJoining": "2020-10-16"
+        },
+        {
+            "empId": 28,
+            "empName": "Preeti",
+            "deptId": 3,
+            "designation": "Executive",
+            "basicSalary": 72675,
+            "dateOfJoining": "2015-09-14"
+        },
+        {
+            "empId": 29,
+            "empName": "Manoj",
+            "deptId": 2,
+            "designation": "Developer",
+            "basicSalary": 38201,
+            "dateOfJoining": "2019-03-30"
+        },
+        {
+            "empId": 30,
+            "empName": "Sonam",
+            "deptId": 4,
+            "designation": "Consultant",
+            "basicSalary": 66818,
+            "dateOfJoining": "2020-11-12"
+        }
+    ]
+}

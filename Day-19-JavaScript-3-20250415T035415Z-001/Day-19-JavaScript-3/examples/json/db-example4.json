@@ -1,0 +1,139 @@
+{
+  "department": [
+    {
+      "deptId": 1,
+      "deptName": "Human Resources",
+      "id": "3ca3"
+    },
+    {
+      "deptId": 2,
+      "deptName": "Engineering",
+      "id": "be56"
+    },
+    {
+      "deptId": 3,
+      "deptName": "Sales",
+      "id": "ec3b"
+    }
+  ],
+  "employees": [
+    {
+      "empId": 1,
+      "name": "Amit Kumar",
+      "dept": "Engineering",
+      "desig": "Developer",
+      "salary": 60000,
+      "doj": "2021-05-10",
+      "deptId": 2,
+      "id": "31ae"
+    },
+    {
+      "empId": 2,
+      "name": "Priya Sharma",
+      "dept": "Sales",
+      "desig": "Executive",
+      "salary": 45000,
+      "doj": "2022-01-20",
+      "deptId": 3,
+      "id": "6e2b"
+    },
+    {
+      "empId": 3,
+      "name": "Ravi Verma",
+      "dept": "Engineering",
+      "desig": "Tester",
+      "salary": 50000,
+      "doj": "2023-02-15",
+      "deptId": 2,
+      "id": "f5a0"
+    },
+    {
+      "empId": 4,
+      "name": "Neha Singh",
+      "dept": "Human Resources",
+      "desig": "HR Manager",
+      "salary": 70000,
+      "doj": "2020-09-12",
+      "deptId": 1,
+      "id": "f1ce"
+    },
+    {
+      "empId": 5,
+      "name": "Suresh Mehta",
+      "dept": "Sales",
+      "desig": "Sales Manager",
+      "salary": 65000,
+      "doj": "2021-07-18",
+      "deptId": 3,
+      "id": "db00"
+    },
+    {
+      "empId": 6,
+      "name": "Anjali Rao",
+      "dept": "Engineering",
+      "desig": "Developer",
+      "salary": 62000,
+      "doj": "2022-11-22",
+      "deptId": 2,
+      "id": "adcd"
+    },
+    {
+      "empId": 7,
+      "name": "Deepak Thakur",
+      "dept": "Human Resources",
+      "desig": "Recruiter",
+      "salary": 48000,
+      "doj": "2023-03-03",
+      "deptId": 1,
+      "id": "3b63"
+    },
+    {
+      "empId": 8,
+      "name": "Ritika Jain",
+      "dept": "Sales",
+      "desig": "Executive",
+      "salary": 46000,
+      "doj": "2023-05-09",
+      "deptId": 3,
+      "id": "a465"
+    },
+    {
+      "empId": 9,
+      "name": "Rahul Kapoor",
+      "dept": "Engineering",
+      "desig": "Lead Developer",
+      "salary": 85000,
+      "doj": "2019-06-25",
+      "deptId": 2,
+      "id": "a32a"
+    },
+    {
+      "empId": 10,
+      "name": "Meena Nair",
+      "dept": "Human Resources",
+      "desig": "HR Executive",
+      "salary": 55000,
+      "doj": "2022-08-11",
+      "deptId": 1,
+      "id": "c491"
+    },
+    {
+      "id": "7782",
+      "name": "Manish Jain",
+      "dept": "Human Resources",
+      "desig": "Manager",
+      "salary": 10000,
+      "doj": "2010-01-10",
+      "deptId": 1
+    },
+    {
+      "id": "150c",
+      "name": "Akash Jain",
+      "dept": "Engineering",
+      "desig": "Manager",
+      "salary": 10000,
+      "doj": "2025-01-10",
+      "deptId": 2
+    }
+  ]
+}

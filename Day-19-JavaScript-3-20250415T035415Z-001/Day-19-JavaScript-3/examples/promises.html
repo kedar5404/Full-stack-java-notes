@@ -1,0 +1,30 @@
+<html>
+
+<head>
+    <script>
+        // Creating a promise
+        const fetchUserData = new Promise((resolve, reject) => {
+            const isDataFetched = true; // Simulate a condition
+
+            setTimeout(() => {
+                if (isDataFetched) {
+                    resolve("User data fetched successfully!");
+                } else {
+                    reject("Failed to fetch user data.");
+                }
+            }, 2000); // Simulating network delay
+        });
+
+        // Consuming the promise
+        fetchUserData
+            .then(result => {
+                console.log(result); // Output: User data fetched successfully!
+            })
+            .catch(error => {
+                console.error(error); // If promise is rejected
+            });
+
+    </script>
+</head>
+
+</html>

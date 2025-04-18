@@ -1,0 +1,35 @@
+<html>
+
+<head>
+    <script>
+        // Simulating a data-fetching function that returns a promise
+        const fetchUserData = () => {
+            return new Promise((resolve, reject) => {
+                const isDataFetched = true; // Simulate a condition
+
+                setTimeout(() => {
+                    if (isDataFetched) {
+                        resolve("User data fetched successfully!");
+                    } else {
+                        reject("Failed to fetch user data.");
+                    }
+                }, 2000); // Simulating network delay
+            });
+        };
+
+        // Using async/await for asynchronous handling
+        async function getUserData() {
+            try {
+                const result = await fetchUserData(); // Wait for the promise to resolve
+                console.log(result); // Output: User data fetched successfully!
+            } catch (error) {
+                console.error(error); // If promise is rejected
+            }
+        }
+
+        getUserData();
+
+    </script>
+</head>
+
+</html>
